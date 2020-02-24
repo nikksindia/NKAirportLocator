@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A212FA7124026E4E0037A513 /* NKAirportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212FA7024026E4E0037A513 /* NKAirportModel.swift */; };
+		A212FA7324039BCF0037A513 /* NKAirportAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212FA7224039BCF0037A513 /* NKAirportAnnotation.swift */; };
+		A212FA752403B77C0037A513 /* NKRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212FA742403B77C0037A513 /* NKRequestBuilder.swift */; };
 		A25E3BFE2400227900141448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E3BFD2400227900141448 /* AppDelegate.swift */; };
-		A25E3C002400227900141448 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E3BFF2400227900141448 /* SceneDelegate.swift */; };
-		A25E3C022400227900141448 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E3C012400227900141448 /* ViewController.swift */; };
 		A25E3C052400227900141448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25E3C032400227900141448 /* Main.storyboard */; };
 		A25E3C072400227D00141448 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25E3C062400227D00141448 /* Assets.xcassets */; };
 		A25E3C0A2400227D00141448 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25E3C082400227D00141448 /* LaunchScreen.storyboard */; };
 		A25E3C152400227D00141448 /* NKAirportLocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E3C142400227D00141448 /* NKAirportLocatorTests.swift */; };
+		A25E3C2424016F1800141448 /* NKLocatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E3C2324016F1800141448 /* NKLocatorVC.swift */; };
+		A25E3C262401701200141448 /* NKLocatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E3C252401701200141448 /* NKLocatorViewModel.swift */; };
+		A25E3C29240266C900141448 /* NKNetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E3C28240266C900141448 /* NKNetworkConfig.swift */; };
+		A25E3C2B24026B3F00141448 /* NKServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E3C2A24026B3F00141448 /* NKServiceManager.swift */; };
+		A25E3C2D24026BA800141448 /* NKServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E3C2C24026BA800141448 /* NKServiceProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A212FA7024026E4E0037A513 /* NKAirportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKAirportModel.swift; sourceTree = "<group>"; };
+		A212FA7224039BCF0037A513 /* NKAirportAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKAirportAnnotation.swift; sourceTree = "<group>"; };
+		A212FA742403B77C0037A513 /* NKRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKRequestBuilder.swift; sourceTree = "<group>"; };
 		A25E3BFA2400227900141448 /* NKAirportLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NKAirportLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25E3BFD2400227900141448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A25E3BFF2400227900141448 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A25E3C012400227900141448 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A25E3C042400227900141448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A25E3C062400227D00141448 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A25E3C092400227D00141448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +45,11 @@
 		A25E3C102400227D00141448 /* NKAirportLocatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NKAirportLocatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25E3C142400227D00141448 /* NKAirportLocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKAirportLocatorTests.swift; sourceTree = "<group>"; };
 		A25E3C162400227D00141448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A25E3C2324016F1800141448 /* NKLocatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKLocatorVC.swift; sourceTree = "<group>"; };
+		A25E3C252401701200141448 /* NKLocatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKLocatorViewModel.swift; sourceTree = "<group>"; };
+		A25E3C28240266C900141448 /* NKNetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKNetworkConfig.swift; sourceTree = "<group>"; };
+		A25E3C2A24026B3F00141448 /* NKServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKServiceManager.swift; sourceTree = "<group>"; };
+		A25E3C2C24026BA800141448 /* NKServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKServiceProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +91,9 @@
 		A25E3BFC2400227900141448 /* NKAirportLocator */ = {
 			isa = PBXGroup;
 			children = (
+				A25E3C27240266B100141448 /* Network */,
+				A25E3C1F24016EC500141448 /* Controllers */,
 				A25E3BFD2400227900141448 /* AppDelegate.swift */,
-				A25E3BFF2400227900141448 /* SceneDelegate.swift */,
-				A25E3C012400227900141448 /* ViewController.swift */,
 				A25E3C032400227900141448 /* Main.storyboard */,
 				A25E3C062400227D00141448 /* Assets.xcassets */,
 				A25E3C082400227D00141448 /* LaunchScreen.storyboard */,
@@ -97,6 +109,52 @@
 				A25E3C162400227D00141448 /* Info.plist */,
 			);
 			path = NKAirportLocatorTests;
+			sourceTree = "<group>";
+		};
+		A25E3C1F24016EC500141448 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A25E3C2224016EE300141448 /* ViewModel */,
+				A25E3C2124016EDC00141448 /* View */,
+				A25E3C2024016ED500141448 /*  Model */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A25E3C2024016ED500141448 /*  Model */ = {
+			isa = PBXGroup;
+			children = (
+				A212FA7024026E4E0037A513 /* NKAirportModel.swift */,
+				A212FA7224039BCF0037A513 /* NKAirportAnnotation.swift */,
+			);
+			path = " Model";
+			sourceTree = "<group>";
+		};
+		A25E3C2124016EDC00141448 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A25E3C2324016F1800141448 /* NKLocatorVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A25E3C2224016EE300141448 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A25E3C252401701200141448 /* NKLocatorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A25E3C27240266B100141448 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A25E3C28240266C900141448 /* NKNetworkConfig.swift */,
+				A25E3C2C24026BA800141448 /* NKServiceProvider.swift */,
+				A25E3C2A24026B3F00141448 /* NKServiceManager.swift */,
+				A212FA742403B77C0037A513 /* NKRequestBuilder.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +258,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25E3C022400227900141448 /* ViewController.swift in Sources */,
+				A25E3C2B24026B3F00141448 /* NKServiceManager.swift in Sources */,
+				A212FA7324039BCF0037A513 /* NKAirportAnnotation.swift in Sources */,
+				A25E3C29240266C900141448 /* NKNetworkConfig.swift in Sources */,
+				A212FA752403B77C0037A513 /* NKRequestBuilder.swift in Sources */,
+				A212FA7124026E4E0037A513 /* NKAirportModel.swift in Sources */,
+				A25E3C262401701200141448 /* NKLocatorViewModel.swift in Sources */,
 				A25E3BFE2400227900141448 /* AppDelegate.swift in Sources */,
-				A25E3C002400227900141448 /* SceneDelegate.swift in Sources */,
+				A25E3C2424016F1800141448 /* NKLocatorVC.swift in Sources */,
+				A25E3C2D24026BA800141448 /* NKServiceProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -348,7 +412,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -363,7 +427,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LDSSWMY9Q;
 				INFOPLIST_FILE = NKAirportLocator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,7 +447,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LDSSWMY9Q;
 				INFOPLIST_FILE = NKAirportLocator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
