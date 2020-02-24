@@ -26,7 +26,8 @@ final class NKLocatorViewModel {
   }
 
   //MARK: Public Methods
-  public func requestToGetNearbyAiportsTo(lat latitude: Double,long longitude: Double) {
+  public func requestToGetNearbyAiportsTo(lat latitude: Double,
+                                          long longitude: Double) {
     serviceProvider.getNerabyAirports(latitude: latitude,
                                       longitude: longitude) {[weak self] (results, error) in
                                         if error == nil {

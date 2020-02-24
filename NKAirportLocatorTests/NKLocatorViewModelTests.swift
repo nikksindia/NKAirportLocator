@@ -16,6 +16,7 @@ class NKLocatorViewModelTests: XCTestCase {
   private var testLongitude: Double?
 
   override func setUp() {
+    super.setUp()
     viewModel = NKLocatorViewModel(serviceProvider: NKMockServiceManager())
     testLatitude = 28.5355
     testLongitude = 77.3910
@@ -25,6 +26,7 @@ class NKLocatorViewModelTests: XCTestCase {
     viewModel = nil
     testLatitude = nil
     testLongitude = nil
+    super.tearDown()
   }
 
   func testRequestToGetNearbyAiportsTo() {

@@ -21,6 +21,6 @@ struct NKNetworkConfig {
   static let radius = 25
 }
 
-struct NKAPIRoutes {
-  static let nearbyAirports = "findNearbyJSON"
+enum NKAPIRoute: String {
+  case nearbyAirports = "findNearbyJSON"
 }

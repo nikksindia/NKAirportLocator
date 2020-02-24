@@ -11,38 +11,33 @@ import Foundation
 enum APIErrorCode: Error {
     case unknown
     case invalidRequest
-    case invalidUrl
-    case jsonParsingError
+    case requestFailed
+    case modellingError
     case mockJSONNotFound
-    case typeCastError
 }
 
 final class NKRequestBuilder {
 
   //MARK: Class Methods
-  class func getRequest(urlString: String,
-                        params: [AnyHashable: Any]?,
+  class func getRequest(route: NKAPIRoute,
+                        params: [String: String]?,
                         headers: [String: String]?,
                         timeoutInterval: TimeInterval) -> URLRequest? {
 
     var request: URLRequest?
 
+    let urlString = NKNetworkConfig.baseURL + route.rawValue + (params?.stringFromHttpParameters() ?? "")
+
     if let url = URL(string: urlString) {
-      request = URLRequest(url: url, timeoutInterval: timeoutInterval)
+      request = URLRequest(url: url,
+                           timeoutInterval: timeoutInterval)
       request?.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
       request?.httpMethod = "GET"
       //HTTP Headers
       if let headers = headers {
         for (key, value) in headers {
-          request?.setValue(value, forHTTPHeaderField: key)
-        }
-      }
-      //HTTP Body
-      if let body = params {
-        do {
-          request?.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
-        } catch let error {
-          debugPrint(error.localizedDescription)
+          request?.setValue(value,
+                            forHTTPHeaderField: key)
         }
       }
     }

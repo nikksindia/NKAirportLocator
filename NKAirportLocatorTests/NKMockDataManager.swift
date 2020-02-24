@@ -11,7 +11,8 @@ import Foundation
 final class NKMockDataManager {
   
   class func readMockDataFromFile(_ fileName: String) -> Data? {
-    guard let url = Bundle.main.url(forResource: fileName, withExtension: "json")
+    guard let url = Bundle.main.url(forResource: fileName,
+                                    withExtension: "json")
       else { return nil }
     do {
       let data = try Data(contentsOf: url)

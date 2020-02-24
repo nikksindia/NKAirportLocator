@@ -49,6 +49,15 @@ final class NKLocatorVC: UIViewController {
       mapView.addAnnotation(annotaion)
     }
   }
+  private func alertPopupWithBody(_ message: String?) {
+    let alertController = UIAlertController(title: "Error!",
+                                            message: message,
+                                            preferredStyle: .alert)
+    let okayAction = UIAlertAction(title: "Okay",
+                                   style: .default)
+    alertController.addAction(okayAction)
+    present(alertController, animated: true, completion: nil)
+  }
 
   //MARK: Private Methods - Data Setup
   private func setupData() {
@@ -67,6 +76,11 @@ final class NKLocatorVC: UIViewController {
     viewModel.fetchNearbyAirportsSuccess = { [weak self] (results) in
       DispatchQueue.main.async {
         self?.addAnnotaionsOnMap(results ?? [])
+      }
+    }
+    viewModel.showAlertMessage = { [weak self] (message) in
+      DispatchQueue.main.async {
+        self?.alertPopupWithBody(message)
       }
     }
   }

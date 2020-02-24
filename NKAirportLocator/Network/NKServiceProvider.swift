@@ -10,7 +10,7 @@ import Foundation
 
 typealias SearchAirportResult = (NKNearbyResult?,Error?) -> ()
 
-protocol NKAirportServiceProvider {
+protocol NKAirportServiceProvider: AnyObject {
   func getNerabyAirports(latitude: Double,
                          longitude: Double,
                          completion: @escaping SearchAirportResult)

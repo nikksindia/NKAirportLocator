@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias Response = (_ data: Data?, _ error: Error?) -> (Void)
+typealias Response = (_ data: Data?, _ error: Error?) -> ()
 
 final class NKAirportService: NKAirportServiceProvider {
   
@@ -16,9 +16,9 @@ final class NKAirportService: NKAirportServiceProvider {
   func getNerabyAirports(latitude: Double,
                          longitude: Double,
                          completion: @escaping SearchAirportResult) {
-
-    let urlString = requestURLString(lat: latitude, long: longitude)
-    getData(urlString: urlString) { (response, error) -> () in
+    let requestParams = nearbyAirportsRequestParams(lat: latitude, long: longitude)
+    getData(route: .nearbyAirports,
+            params: requestParams) { (response, error) -> () in
       guard error == nil,
         let responseData = response else {
           completion(nil, error)
@@ -34,15 +34,25 @@ final class NKAirportService: NKAirportServiceProvider {
   }
 
   //MARK:- Private methods
-  private func getData(urlString: String,
-                       params: [AnyHashable: Any]? = nil,
+  private func nearbyAirportsRequestParams(lat latitude: Double,
+                                           long longitude: Double) -> [String: String] {
+    let requestDict = ["lat":"\(latitude)", "lng": "\(longitude)",
+                       "fcodeName": NKNetworkConfig.serviceName,
+                       "fcode": NKNetworkConfig.serviceCode,
+                       "radius": "\(NKNetworkConfig.radius)",
+                       "maxRows": "\(NKNetworkConfig.maxResults)",
+                       "username": NKNetworkConfig.authUserName]
+    return requestDict
+  }
+  private func getData(route: NKAPIRoute,
+                       params: [String: String]? = nil,
                        headers: [String: String]? = nil,
                        completion: @escaping Response) {
 
-    guard let request = NKRequestBuilder.getRequest(urlString: urlString,
-                                                 params: params,
-                                                 headers: headers,
-                                                 timeoutInterval: NKNetworkConfig.requestTimeout)
+    guard let request = NKRequestBuilder.getRequest(route: route,
+                                                    params: params,
+                                                    headers: headers,
+                                                    timeoutInterval: NKNetworkConfig.requestTimeout)
       else {
         completion(nil, APIErrorCode.invalidRequest)
         return
@@ -52,10 +62,4 @@ final class NKAirportService: NKAirportServiceProvider {
     }
     dataTask.resume()
   }
-
-  private func requestURLString(lat: Double, long: Double) -> String {
-    let requestURLString = "\(NKNetworkConfig.baseURL)\(NKAPIRoutes.nearbyAirports)?lat=\(lat)&lng=\(long)&fcodeName=\(NKNetworkConfig.serviceName)&fcode=\(NKNetworkConfig.serviceCode)&radius=\(NKNetworkConfig.radius)&maxRows=\(NKNetworkConfig.maxResults)&username=\(NKNetworkConfig.authUserName)"
-    return requestURLString
-  }
-  
 }

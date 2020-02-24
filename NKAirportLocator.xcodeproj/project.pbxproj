@@ -16,6 +16,8 @@
 		A212FA7E2403CB100037A513 /* NearbyAirportsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = A212FA7C2403CB080037A513 /* NearbyAirportsMock.json */; };
 		A212FA802403CC8A0037A513 /* NKMockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212FA7F2403CC8A0037A513 /* NKMockDataManager.swift */; };
 		A212FA812403CC8A0037A513 /* NKMockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212FA7F2403CC8A0037A513 /* NKMockDataManager.swift */; };
+		A212FA842403DA260037A513 /* NKDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212FA832403DA260037A513 /* NKDictionaryExtension.swift */; };
+		A212FA852403DA260037A513 /* NKDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212FA832403DA260037A513 /* NKDictionaryExtension.swift */; };
 		A25E3BFE2400227900141448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E3BFD2400227900141448 /* AppDelegate.swift */; };
 		A25E3C052400227900141448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25E3C032400227900141448 /* Main.storyboard */; };
 		A25E3C072400227D00141448 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25E3C062400227D00141448 /* Assets.xcassets */; };
@@ -46,6 +48,7 @@
 		A212FA782403C55C0037A513 /* NKMockServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKMockServiceManager.swift; sourceTree = "<group>"; };
 		A212FA7C2403CB080037A513 /* NearbyAirportsMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NearbyAirportsMock.json; sourceTree = "<group>"; };
 		A212FA7F2403CC8A0037A513 /* NKMockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKMockDataManager.swift; sourceTree = "<group>"; };
+		A212FA832403DA260037A513 /* NKDictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKDictionaryExtension.swift; sourceTree = "<group>"; };
 		A25E3BFA2400227900141448 /* NKAirportLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NKAirportLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25E3BFD2400227900141448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A25E3C042400227900141448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A212FA822403DA090037A513 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A212FA832403DA260037A513 /* NKDictionaryExtension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		A25E3BF12400227900141448 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +112,7 @@
 		A25E3BFC2400227900141448 /* NKAirportLocator */ = {
 			isa = PBXGroup;
 			children = (
+				A212FA822403DA090037A513 /* Utilities */,
 				A25E3C27240266B100141448 /* Network */,
 				A25E3C1F24016EC500141448 /* Controllers */,
 				A25E3BFD2400227900141448 /* AppDelegate.swift */,
@@ -276,6 +288,7 @@
 			files = (
 				A25E3C2B24026B3F00141448 /* NKServiceManager.swift in Sources */,
 				A212FA7324039BCF0037A513 /* NKAirportAnnotation.swift in Sources */,
+				A212FA842403DA260037A513 /* NKDictionaryExtension.swift in Sources */,
 				A25E3C29240266C900141448 /* NKNetworkConfig.swift in Sources */,
 				A212FA802403CC8A0037A513 /* NKMockDataManager.swift in Sources */,
 				A212FA752403B77C0037A513 /* NKRequestBuilder.swift in Sources */,
@@ -294,6 +307,7 @@
 			files = (
 				A212FA772403C4F80037A513 /* NKLocatorViewModelTests.swift in Sources */,
 				A25E3C152400227D00141448 /* NKAirportLocatorTests.swift in Sources */,
+				A212FA852403DA260037A513 /* NKDictionaryExtension.swift in Sources */,
 				A212FA812403CC8A0037A513 /* NKMockDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,7 +16,8 @@ class NKMockServiceManager: NKAirportServiceProvider {
 
     if let response = NKMockDataManager.readMockDataFromFile("NearbyAirportsMock") {
         do {
-            let object = try JSONDecoder().decode(NKNearbyResult.self, from: response)
+            let object = try JSONDecoder().decode(NKNearbyResult.self,
+                                                  from: response)
             completion(object,nil)
         } catch let error {
             completion(nil,error)
