@@ -11,6 +11,7 @@ import Foundation
 typealias Response = (_ data: Data?, _ error: Error?) -> (Void)
 
 final class NKAirportService: NKAirportServiceProvider {
+  
   //MARK: Public Methods
   func getNerabyAirports(latitude: Double,
                          longitude: Double,
@@ -33,28 +34,23 @@ final class NKAirportService: NKAirportServiceProvider {
   }
 
   //MARK:- Private methods
-  private func invalidRequestError() -> NSError {
-    return NSError(domain:"",
-                   code: 500,
-                   userInfo:[NSLocalizedDescriptionKey: "Invaild Request"])
-  }
-
-  private func getData(urlString: String, params: [AnyHashable: Any]? = nil,
+  private func getData(urlString: String,
+                       params: [AnyHashable: Any]? = nil,
                        headers: [String: String]? = nil,
-                       handler: @escaping Response) {
+                       completion: @escaping Response) {
 
-    if let request = NKRequestBuilder.getRequest(urlString: urlString,
+    guard let request = NKRequestBuilder.getRequest(urlString: urlString,
                                                  params: params,
                                                  headers: headers,
-                                                 timeoutInterval: NKNetworkConfig.requestTimeout) {
-
-      let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-        handler(data, error)
-      }
-      task.resume()
-    } else {
-      handler(nil, self.invalidRequestError())
+                                                 timeoutInterval: NKNetworkConfig.requestTimeout)
+      else {
+        completion(nil, APIErrorCode.invalidRequest)
+        return
     }
+    let dataTask = URLSession.shared.dataTask(with: request) { (data, _, error) in
+      completion(data, error)
+    }
+    dataTask.resume()
   }
 
   private func requestURLString(lat: Double, long: Double) -> String {

@@ -8,7 +8,16 @@
 
 import Foundation
 
-class NKRequestBuilder {
+enum APIErrorCode: Error {
+    case unknown
+    case invalidRequest
+    case invalidUrl
+    case jsonParsingError
+    case mockJSONNotFound
+    case typeCastError
+}
+
+final class NKRequestBuilder {
 
   //MARK: Class Methods
   class func getRequest(urlString: String,

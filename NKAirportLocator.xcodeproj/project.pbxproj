@@ -10,6 +10,12 @@
 		A212FA7124026E4E0037A513 /* NKAirportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212FA7024026E4E0037A513 /* NKAirportModel.swift */; };
 		A212FA7324039BCF0037A513 /* NKAirportAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212FA7224039BCF0037A513 /* NKAirportAnnotation.swift */; };
 		A212FA752403B77C0037A513 /* NKRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212FA742403B77C0037A513 /* NKRequestBuilder.swift */; };
+		A212FA772403C4F80037A513 /* NKLocatorViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212FA762403C4F80037A513 /* NKLocatorViewModelTests.swift */; };
+		A212FA7B2403C7C80037A513 /* NKMockServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212FA782403C55C0037A513 /* NKMockServiceManager.swift */; };
+		A212FA7D2403CB080037A513 /* NearbyAirportsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = A212FA7C2403CB080037A513 /* NearbyAirportsMock.json */; };
+		A212FA7E2403CB100037A513 /* NearbyAirportsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = A212FA7C2403CB080037A513 /* NearbyAirportsMock.json */; };
+		A212FA802403CC8A0037A513 /* NKMockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212FA7F2403CC8A0037A513 /* NKMockDataManager.swift */; };
+		A212FA812403CC8A0037A513 /* NKMockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212FA7F2403CC8A0037A513 /* NKMockDataManager.swift */; };
 		A25E3BFE2400227900141448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E3BFD2400227900141448 /* AppDelegate.swift */; };
 		A25E3C052400227900141448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25E3C032400227900141448 /* Main.storyboard */; };
 		A25E3C072400227D00141448 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25E3C062400227D00141448 /* Assets.xcassets */; };
@@ -36,6 +42,10 @@
 		A212FA7024026E4E0037A513 /* NKAirportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKAirportModel.swift; sourceTree = "<group>"; };
 		A212FA7224039BCF0037A513 /* NKAirportAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKAirportAnnotation.swift; sourceTree = "<group>"; };
 		A212FA742403B77C0037A513 /* NKRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKRequestBuilder.swift; sourceTree = "<group>"; };
+		A212FA762403C4F80037A513 /* NKLocatorViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKLocatorViewModelTests.swift; sourceTree = "<group>"; };
+		A212FA782403C55C0037A513 /* NKMockServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKMockServiceManager.swift; sourceTree = "<group>"; };
+		A212FA7C2403CB080037A513 /* NearbyAirportsMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NearbyAirportsMock.json; sourceTree = "<group>"; };
+		A212FA7F2403CC8A0037A513 /* NKMockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKMockDataManager.swift; sourceTree = "<group>"; };
 		A25E3BFA2400227900141448 /* NKAirportLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NKAirportLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25E3BFD2400227900141448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A25E3C042400227900141448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				A25E3C142400227D00141448 /* NKAirportLocatorTests.swift */,
+				A212FA762403C4F80037A513 /* NKLocatorViewModelTests.swift */,
+				A212FA782403C55C0037A513 /* NKMockServiceManager.swift */,
+				A212FA7F2403CC8A0037A513 /* NKMockDataManager.swift */,
+				A212FA7C2403CB080037A513 /* NearbyAirportsMock.json */,
 				A25E3C162400227D00141448 /* Info.plist */,
 			);
 			path = NKAirportLocatorTests;
@@ -240,6 +254,7 @@
 			files = (
 				A25E3C0A2400227D00141448 /* LaunchScreen.storyboard in Resources */,
 				A25E3C072400227D00141448 /* Assets.xcassets in Resources */,
+				A212FA7E2403CB100037A513 /* NearbyAirportsMock.json in Resources */,
 				A25E3C052400227900141448 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A212FA7D2403CB080037A513 /* NearbyAirportsMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,9 +277,11 @@
 				A25E3C2B24026B3F00141448 /* NKServiceManager.swift in Sources */,
 				A212FA7324039BCF0037A513 /* NKAirportAnnotation.swift in Sources */,
 				A25E3C29240266C900141448 /* NKNetworkConfig.swift in Sources */,
+				A212FA802403CC8A0037A513 /* NKMockDataManager.swift in Sources */,
 				A212FA752403B77C0037A513 /* NKRequestBuilder.swift in Sources */,
 				A212FA7124026E4E0037A513 /* NKAirportModel.swift in Sources */,
 				A25E3C262401701200141448 /* NKLocatorViewModel.swift in Sources */,
+				A212FA7B2403C7C80037A513 /* NKMockServiceManager.swift in Sources */,
 				A25E3BFE2400227900141448 /* AppDelegate.swift in Sources */,
 				A25E3C2424016F1800141448 /* NKLocatorVC.swift in Sources */,
 				A25E3C2D24026BA800141448 /* NKServiceProvider.swift in Sources */,
@@ -274,7 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A212FA772403C4F80037A513 /* NKLocatorViewModelTests.swift in Sources */,
 				A25E3C152400227D00141448 /* NKAirportLocatorTests.swift in Sources */,
+				A212FA812403CC8A0037A513 /* NKMockDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

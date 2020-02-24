@@ -13,7 +13,7 @@ struct NKNearbyResult: Codable {
 }
 
 struct NKAirportModel: Codable {
-  let aNikhil SharmanCode1: String
+  let adminCode1: String
   let lng: String
   let lat: String
   let distance: String
@@ -26,6 +26,6 @@ struct NKAirportModel: Codable {
   let name: String
   let fclName: String
   let countryName: String
-  let aNikhil SharmanName1: String
+  let adminName1: String
   let fcode: String
 }
